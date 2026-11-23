@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.0//EN"
+	"http://www.w3.org/TR/xhtml-basic/xhtml-basic10.dtd">
+<html>
+	<head>
+		<title>dotViewer 操作一覧</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="description" content="" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<meta name="keywords" content="NULL" />
+		<meta name="robots" content="noindex" />
+		<meta name="googlebot" content="noindex" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="theme-color" content="#07f" />
+		<meta name="author" content="おじょ[ojo]" />
+		<style>
+			:root
+			{
+				/* --keyColor: #07f; */
+				--keyColor: rgb(255, 94, 0);
+				--foreColor: #111;
+			}
+			::-webkit-scrollbar
+			{
+				width: 15px;
+				width: 0.55rem;
+				border-radius: 0.125rem;
+			}
+
+			::-webkit-scrollbar-track
+			{
+				border-radius: 10px;
+				box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+				background-color: #252525;
+			}
+
+			::-webkit-scrollbar-thumb
+			{
+				border-radius: 10px;
+				background-color: var(--keyColor);
+				/* background-color: gray; */
+			}
+
+			body
+			{
+				background-color: black;
+				color: antiquewhite;
+			}
+
+			.alignCenter
+			{
+				text-align: center;
+			}
+
+			h1,
+			table
+			{
+				width: 100vmin;
+				margin: 0 auto;
+				border-spacing: 5px 18px;
+			}
+
+			h1
+			{
+				margin: 2rem auto;
+				text-align: center;
+			}
+
+			th,
+			td
+			{
+				padding: 1%;
+				border-radius: 14px;
+			}
+
+			tr td
+			{
+				padding-left: 5.8%;
+			}
+
+			tr:nth-child(odd)
+			{
+				background-color: #252525;
+			}
+
+			tr:nth-child(even)
+			{
+				background-color: #191919;
+			}
+
+			tr.header
+			{
+				background-color: var(--keyColor);
+				color: var(--foreColor);
+			}
+
+			footer
+			{
+				margin-top: 10%;
+				margin-bottom: 10%;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>dotViewer&nbsp;操作一覧</h1>
+		<table>
+			<tr class="header"><th>マウス左ボタン</th><th>動作</th></tr>
+			<tr><th>ドラッグ</th><td>サムネイルの位置を変更</td></tr>
+			<tr><th>ダブルクリック</th><td>ウィンドウ最大化／標準の切り替え</td></tr>
+
+			<tr class="header"><th>マウス右ボタン</th><th>動作</th></tr>
+			<tr><th>ドラッグ</th><td>画像の表示位置をドラッグ</td></tr>
+			<tr><th>マウスホイール</th><td>画像のズーム</td></tr>
+
+			<tr class="header"><th>マウス（その他）</th><th>動作</th></tr>
+			<tr><th>ホイールボタンを押し込む</th><td>画像の読み込み直し</td></tr>
+
+			<tr class="header"><th>キーボード</th><th>動作</th></tr>
+			<tr><th>H</th><td>画像をヨコ反転</td></tr>
+			<tr><th>T</th><td>デスクトップの最前面に表示（切り替え）</td></tr>
+			<tr><th>Q</th><td>座標情報の表示（切り替え）</td></tr>
+			<tr><th>Escape</th><td>最大化から標準サイズに戻す</td></tr>
+			<tr><th>Space</th><td>アニメGIFを再生中、再生状態の切り替え<br />（再生/停止）</td></tr>
+			<tr><th>← ｜ →</th><td>アニメGIFを再生中、フレームを前後移動</td></tr>
+			<tr><th>+（プラス）</th><td>拡大率を上げる</td></tr>
+			<tr><th>-（マイナス）</th><td>拡大率を下げる</td></tr>
+
+			<tr class="header"><th>Fキー</th><th>動作</th></tr>
+			<tr><th>F1</th><td>本HTMLを開く</td></tr>
+			<tr><th>F2</th><td>サムネイルをタイル状に並べる（タイリング）</td></tr>
+			<tr><th>F3</th><td>すべてのサムネイル幅（width）を、<br />フォーカスしたサムネイルと同じに設定</td></tr>
+			<tr><th>F4</th><td>サムネイルを最小化</td></tr>
+			<tr><th>F5</th><td>画像の読み込み直し<!--（表示位置もリセット）--></td></tr>
+			<tr><th>F6</th><td>すべてのサムネイルを最小化</td></tr>
+			<tr><th>F7</th><td>-</td></tr>
+			<tr><th>F8</th><td>-</td></tr>
+
+			<tr class="header"><th>画像フィルタ</th><th>動作</th></tr>
+			<tr><th>F9</th><td>グレースケール</td></tr>
+			<tr><th>F10</th><td>バイナリ（2値）</td></tr>
+			<tr><th>F11</th><td>セピア</td></tr>
+			<tr><th>F12</th><td>ナイトビュー（黄色みが増す）</td></tr>
+			<tr><th>R</th><td>赤チャンネルのみを表示（切り替え）</td></tr>
+			<tr><th>G</th><td>青チャンネルのみを表示（切り替え）</td></tr>
+			<tr><th>B</th><td>緑チャンネルのみを表示（切り替え）</td></tr>
+
+			<tr class="header"><th>Shiftを押しながら</th><th>動作</th></tr>
+			<tr><th>← ｜ →</th><td>同フォルダ内の画像に移動<br />※ファイルパスが変更されます</td></tr>
+			<tr><th>マウスホイール回転</th><td>フィルタが「バイナリ（2値）」の場合に、しきい値を変更</td></tr>
+			<tr><th>ホイールボタン(真ん中のボタン)</th><td>しきい値のリセット</td></tr>
+			<tr><th>O（オー）</th><td>画像が保存されているフォルダを開く</td></tr>
+			<tr><th>Space</th><td>しきい値のリセット</td></tr>
+
+			<tr class="header"><th>Ctrlを押しながら</th><th>動作</th></tr>
+			<tr><th>I</th><td>色反転</td></tr>
+			<tr><th>O（オー）</th><td>ファイルを開く</td></tr>
+			<tr><th>D</th><td>サムネイルを複製</td></tr>
+			<tr><th>C</th><td>画像をクリップボードにコピー</td></tr>
+			<tr><th>V</th><td>クリップボードに画像がある場合は、貼り付け</td></tr>
+			<tr><th>S</th><td>サムネイルに表示されている画像をローカルフォルダ「save」に保存</td></tr>
+			<tr><th>P</th><td>印刷ダイアログを開き、画像を印刷</td></tr>
+			<tr><th>Q</th><td>サムネイルをすべて閉じる（メインウィンドウは閉じない）</td></tr>
+			<tr><th>W</th><td>サムネイルを閉じる</td></tr>
+			<tr><th>上下左右の方向キー</th><td>サムネイルの位置を1pxずつ移動</td></tr>
+			<tr><th>+（プラス）</th><td>アニメGIFを再生時、再生速度を下げる<br />（フレームレートを加算）</td></tr>
+			<tr><th>-（マイナス）</th><td>アニメGIFを再生時、再生速度を上げる<br />（フレームレートを減算）</td></tr>
+			<tr><th>マウスホイール回転</th><td>画像の明度を変更</td></tr>
+			<tr><th>ホイールボタン（真ん中のボタン）</th><td>明度のリセット</td></tr>
+			<tr><th>Space</th><td>明度のリセット</td></tr>
+
+			<tr class="header"><th>Altを押しながら</th><th>動作</th></tr>
+			<tr><th>マウスホイール回転</th><td>画像の彩度を変更</td></tr>
+			<tr><th>ホイールボタン（真ん中のボタン）</th><td>彩度のリセット</td></tr>
+			<tr><th>O（オー）</th><td>本アプリ経由で保存した画像のストアフォルダを開く</td></tr>
+			<tr><th>Space</th><td>彩度のリセット</td></tr>
+			
+			<tr class="header"><th>Shift　＆　Ctrlを押しながら</th><th>動作</th></tr>
+			<tr><th>P</th><td>カラーパレットを生成</td></tr>
+		</table>
+		<p class="alignCenter">
+		</p>
+		<footer>&copy; ojo3.net 2026</footer>
+	</body>
+</html>
