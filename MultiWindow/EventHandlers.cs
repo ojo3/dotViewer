@@ -766,12 +766,15 @@ namespace dotViewer
         {
             base.OnResize(e);
             if (!IsParent) return;
+            if (_currentImage != null) return;
             if (_pbx.Image != null) return;
-            _pbx.Image = GetInitializeImage(_pbx.Size);
+            _currentImage = GetInitializeImage(_pbx.Size);
+            _pbx.Image = new Bitmap(_currentImage);
         }
 
         private Bitmap GetInitializeImage(Size size)
         {
+            //$"{size}, {BackColor}".test();
             if (size.Width == 0 || size.Height == 0) return null;
             using (var bmp = Ojo3Image.GetInitializeImage("Drag&Drop  Here!!", size, !Theme.TestBrightness(BackColor)))
                 return new Bitmap(bmp);

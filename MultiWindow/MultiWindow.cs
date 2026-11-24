@@ -171,7 +171,7 @@ namespace dotViewer
         {
             if (IsParent) throw new Exception("親では呼ばないでください.");
 
-            var visible = true;
+            var visible = false;
 
             var width = (int)(_pbx.Width * 0.3);
 
@@ -612,7 +612,7 @@ namespace dotViewer
             if (IsParent)
             {
                 _pbx.SizeMode = PictureBoxSizeMode.StretchImage;
-                _currentImage = Ojo3Image.GetInitializeImage("Drag&Drop  Here!!", _pbx.Size);
+                //_currentImage = GetInitializeImage(_pbx.Size);
                 return;
             }
 
