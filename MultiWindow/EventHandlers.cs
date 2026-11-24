@@ -87,6 +87,7 @@ namespace dotViewer
                     {
                         using (var clip = Ojo3Image.GetClipBoardImage())
                         {
+                            //GenerateWindow(new Bitmap(clip));
                             GenerateWindow(clip);
                         }
 
@@ -766,9 +767,11 @@ namespace dotViewer
         {
             base.OnResize(e);
             if (!IsParent) return;
+            if (_pbx.Size.IsEmpty) return;
             if (_currentImage != null) return;
-            if (_pbx.Image != null) return;
+            $"{_pbx.Size.IsEmpty}) {Text}".test();
             _currentImage = GetInitializeImage(_pbx.Size);
+            _pbx.ImageDispose();
             _pbx.Image = new Bitmap(_currentImage);
         }
 
@@ -915,6 +918,7 @@ namespace dotViewer
             // すべてのWindowItemを読み込み完了を通知
             _isLoadComplete = _windowList.Count > 1 && _windowIndex + 1 == _windowList.Count;
             //$"{_windowIndex}) {_isLoadComplete} ({_windowList.Count})".test();
+
             if (Location.X < 0 || Location.Y < 0 || _windowList.Count == 1)
             {
                 Location = Rect.GetCenter_Screen(this);

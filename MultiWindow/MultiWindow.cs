@@ -42,9 +42,7 @@ namespace dotViewer
         public void Initialize_WindowItem(object obj, Point location, bool isAdjustSizeForAspectRatio = false)
         {
             if (obj == null)
-            {
                 throw new ArgumentNullException();
-            }
 
             var path = string.Empty;
 
@@ -54,7 +52,8 @@ namespace dotViewer
             {
                 case Bitmap bmp:
                     {
-                        _clipBoardImage = bmp;
+                        //_clipBoardImage = bmp;
+                        _clipBoardImage = new Bitmap(bmp);
                         break;
                     }
                 case string str:
@@ -819,9 +818,7 @@ namespace dotViewer
         private void ReDraw(bool reset = true, bool filerReset = true)
         {
             if (_currentImage == null)
-            {
                 return;
-            }
 
             if (IsParent)
             {
@@ -1022,7 +1019,7 @@ namespace dotViewer
             // 高さ基準で幅を決定
             var isAdjustSizeForAspectRatio = checkOrientation & LocalWindowItem.Orientation != ImageOrientation.Landscape;
 
-            _isfade.test(true);
+            //_isfade.test(true);
             var mw = new MultiWindow(obj, location, isAdjustSizeForAspectRatio)
             {
                 FadeDuration = _isfade ? 200 : 0,
